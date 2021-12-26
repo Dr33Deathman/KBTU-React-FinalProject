@@ -7,7 +7,7 @@ import "./cart-table.scss";
 
 const CartTable = ({ items, deleteFromCart, RestoService }) => {
   if (items.length === 0) {
-    return <div className="cart__title"> Ваша корзина пуста</div>;
+    return <div className="cart__title"> Your cart is empty</div>;
   }
   const makeOrder = (items) => {
     RestoService.setOrder(generateOrder(items));
@@ -17,7 +17,7 @@ const CartTable = ({ items, deleteFromCart, RestoService }) => {
   };
   return (
     <>
-      <div className="cart__title">Ваш заказ:</div>
+      <div className="cart__title">Your cart:</div>
       <div className="cart__list">
         {items.map((item) => {
           const { price, title, url, id, qtty } = item;
@@ -40,7 +40,7 @@ const CartTable = ({ items, deleteFromCart, RestoService }) => {
           makeOrder(items);
         }}
         className="order">
-        Оформить заказ
+        Make Order
       </button>
     </>
   );

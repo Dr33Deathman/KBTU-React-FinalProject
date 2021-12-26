@@ -9,6 +9,12 @@ const AppHeader = ({ totalPrice }) => {
       <Link className="header__link" to="/menu">
         Menu
       </Link>
+      <Link className="header__link" to="/contacts">
+        Contacts
+      </Link>
+      <Link className="header__link" to="/about">
+        About Us
+      </Link>
       <Link className="header__link" to="/cart">
         <img className="header__cart" src={cartIcon} alt="cart"></img>
         Total: {totalPrice} $

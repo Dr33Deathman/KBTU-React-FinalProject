@@ -3,6 +3,8 @@ import { MainPage, CartPage } from "../pages";
 import AppHeader from "../app-header";
 import Background from "./food-bg.jpg";
 import { Route, Redirect, Switch } from "react-router-dom";
+import AboutUs from "../about-us";
+import Contacts from "../contacts";
 
 const App = () => {
   return (
@@ -11,8 +13,8 @@ const App = () => {
       className="app">
       <AppHeader total={50} />
       <Switch>
-        {/* TODO: About Us */}
-        {/* TODO: Contacts */}
+        <Route exact path="/about" component={AboutUs} />
+        <Route exact path="/contacts" component={Contacts} />
         <Route exact path="/menu" component={MainPage} />
         <Route exact path="/cart" component={CartPage} />
         <Redirect to="/menu" />
