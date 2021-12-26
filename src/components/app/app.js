@@ -11,6 +11,8 @@ const App = () => {
 			className="app">
 			<AppHeader total={50} />
 			<Switch>
+				{/* TODO: About Us */}
+				{/* TODO: Contacts */}
 				<Route exact path="/menu" component={MainPage} />
 				<Route exact path="/cart" component={CartPage} />
 				<Redirect to="/menu" />
